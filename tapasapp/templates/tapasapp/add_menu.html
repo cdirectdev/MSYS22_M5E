@@ -1,0 +1,32 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="card" style="max-width: 600px; margin-top: 20px;">
+        <div class="card-header">
+            <strong>Type in Dish Details:</strong>
+        </div>
+        
+        <div class="card-body">
+            <form action="" method="POST">
+                <p>
+                    <label for="dish_name">Name:</label><br>
+                    <input type="text" id="dish_name" name="dish_name" style="width: 100%;">
+                </p>
+
+                <div style="display: flex; gap: 20px;">
+                    <p style="flex: 1;">
+                        <label for="cooking_time">Cook Time:</label><br>
+                        <input type="number" id="cooking_time" name="cooking_time" style="width: 40%;">
+                    </p>
+                    <p style="flex: 1;">
+                        <label for="prep_time">Prep Time:</label><br>
+                        <input type="number" id="prep_time" name="prep_time" style="width: 40%;">
+                    </p>
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Add to dishes</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
