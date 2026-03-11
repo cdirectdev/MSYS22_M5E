@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
     <div class="card" style="max-width: 600px; margin-top: 20px;">
         <div class="card-header">
             <strong>Type in Dish Details:</strong>
@@ -9,6 +10,7 @@
         
         <div class="card-body">
             <form action="" method="POST">
+                {% csrf_token %}
                 <p>
                     <label for="dish_name">Name:</label><br>
                     <input type="text" id="dish_name" name="dish_name" style="width: 100%;">
